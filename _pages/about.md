@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /Plant/
 title: "Home page"
 excerpt: "About me"
 author_profile: true

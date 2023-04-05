@@ -2,22 +2,22 @@
 main:
 
   - title: "海芋屬 / Alocasia"
-    url: /Alocasia/
+    url: /Plant/Alocasia/
 
   - title: "火鶴屬 / Anthurium"
-    url: /Anthurium/
+    url: /Plant//Anthurium/
 
   - title: "蔓綠絨屬 / Philodendron"
-    url: /Philodendron/
+    url: /Plant//Philodendron/
 
   - title: "個人收藏(天南星) / Araceae collection"
     url: /Araceae_collection/
 
   - title: "Philo介紹"
-    url: /philo_introduce/
+    url: /Plant//philo_introduce/
 
   - title: "植物篩選器 / Plant filter"
-    url: /plant_filter/
+    url: /Plant//plant_filter/
 
   - title: "意見回饋 / Feedback"
     url: "https://forms.gle/ykkzY8VJixVG8wYQA"
