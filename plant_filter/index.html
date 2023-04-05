@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<!-- {"name": "test", "grade": 3, "plant_level": "", "plant_type": "", "info": "", "humidity": "", "temperature": "" , "light": "",  "body": "", "tags":} -->
+<html color-mode="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- primary meta tags -->
+  <title>植物篩選器-prototype</title>
+  <meta name="title" content="植物篩選器-prototype">
+  <!-- Open Graph facebook etc. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://purindaisuki.github.io/TenkafuMaRecruitFilter/">
+  <meta property="og:title" content="植物篩選器-prototype">
+
+  <!-- twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://purindaisuki.github.io/TenkafuMaRecruitFilter/">
+  <meta property="twitter:title" content="植物篩選器-prototype">
+  <meta property="twitter:description" content="植物篩選器-prototype">
+  <meta property="twitter:image"
+    content="https://purindaisuki.github.io/TenkafuMaRecruitFilter/img/website_preview.png">
+  <meta property="twitter:image"
+    content="https://purindaisuki.github.io/TenkafuMaRecruitFilter/img/website_preview_dark.png">
+
+  <meta name="color-mode" content="dark light">
+
+  <link rel="icon" href="./plant_icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="filter.js"></script>
+</head>
+
+<body>
+  <nav class="menu">
+    <div class="menu-container">
+      <ul class="menu-list">
+        <li class="title">
+          <span id="menu-text">植物篩選器 prototype</span>
+          <a href="https://minshuan.github.io/">回到主頁<br></a>
+          <a href="https://forms.gle/mvgVcEgvECg45eHX8"><br>意見回饋</a>
+        </li>
+        <!-- tags -->
+        <li>
+          <svg id="tags-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 10 10" viewBox="0 0 24 24">
+            <image href="./img/tags.png" x="0" y="1" height="20" width="20" />
+          </svg>
+        </li>
+        <li>
+          <svg id="help-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 10 10" viewBox="0 0 24 24">
+            <image href="./img/ask.png" x="0" y="1" height="20" width="20" />
+          </svg>
+        </li>
+        <!-- <li>
+          <svg id="home-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 10 10" viewBox="0 0 24 24">
+          <a xlink:herf="http://google.com" target="_blank"><image href="./img/home.png" x="0" y="1" height="20" width="20"></image>
+          </svg>
+        </li> -->
+        <!-- <li>
+          <svg id="to-top-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+            <path d="M0 0h24v24H0V0z" fill="none" />
+          </svg>
+        </li> -->
+        <li>
+          <label id="color-mode-switch">
+            <input type="checkbox" id="color-mode-checkbox">
+            <span class="slider"></span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <a href="#" id="cd-top"></a>
+  <main>
+    <div>1</div>
+    <div>1</div>
+    <div class="main-container">
+      <div id="filter-panel">
+        <ul id="filter">
+          <li>
+            <div class="filter-item">
+              <div class="filter-head">
+                <div class="filter-title">
+                  <svg class="filter-icon" viewBox="0 0 10 10" id="tag-icon" xmlns="http://www.w3.org/2000/svg">
+                      <image href="./img/label.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                  <label>標籤選擇</label>
+                </div>
+                <div>
+                  <svg id="delete-icon" class="filter-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+                    version="1.1">
+                    <image href="./img/delete.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+              </div>
+              <!-- icons -->
+              <div style="display: none;">
+                <div id="tag-plant_level">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" class="filter-icon" id="plant_level-icon">
+                    <image href="./img/watering-plants.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+                <div id="tag-temperature">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="temperature-icon">
+                    <image href="./img/thermometer.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+                <div id="tag-light">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="light-icon">
+                    <image href="./img/sun.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+                <div id="tag-body">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="body-icon">
+                    <image href="./img/scale.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+                <div id="tag-humidity">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="humidity-icon">
+                    <image href="./img/humidity.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+                <div id="tag-plant_type">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="filter-icon" id="plant_type-icon">
+                    <image href="./img/philodendron.png" x="0" y="0" height="24" width="24" />
+                  </svg>
+                </div>
+                <div id="tag-else">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="else-icon">
+                    <image href="./img/areca-palm.png" x="0" y="0" height="10" width="10" />
+                  </svg>
+                </div>
+              </div>
+              <div class="filter-body">
+                <div id="tag-container">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id=result-container>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>詳細資訊</th>
+              <th id="rarity">種類</th>
+              <th>適宜溫度</th>
+              <th>符合標籤</th>
+            </tr>
+          </thead>
+          <tbody id="result"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <!-- <a href="https://forms.gle/GfejWkNFDvkD2Q9JA" target="_blank">回報徵才結果</a> -->
+  </footer>
+  <!--help modal-->
+  <div id="help-modal" class="modal-container">
+    <div class="modal-content">
+      <div class="modal-head">
+        <span id="close-help-modal" class="close-modal">&times;</span>
+        <span>介紹</span>
+      </div>
+      <div class="modal-body">
+        <p>此網頁為植物篩選器</p>
+        <p>幫助不知道想種什麼的朋友篩選出適當的植物</p>
+      </div>
+      <div class="modal-head">
+        <span>操作說明</span>
+      </div>
+      <div class="modal-body">
+        <p>選擇/輸入標籤以篩選植物 (至少一個)</p>
+        <p>選擇之標籤數需大於或等於至少符合標籤數</p>
+        <p>點擊表格標頭可依升/降序排列</p>
+        <p>標籤至多7個</p>
+      </div>
+      <div class="modal-head">
+        <span>顯示說明</span>
+      </div>
+      <div class="modal-body">
+        <p>顯示結果依照種植難易度分三種顏色</p>
+        <p>綠色代表容易種植</p>
+        <p>藍色代表有一定難度但可嘗試馴化</p>
+        <p>紅色代表需要特殊環境種植</p>
+      </div>
+    </div>
+  </div>
+  <!-- tags -->
+  <div id="tags-modal" class="modal-container">
+    <div class="modal-content">
+      <div class="modal-head">
+        <span id="close-tags-modal" class="close-modal">&times;</span>
+        <span>標籤說明</span>
+      </div>
+      <div class="modal-body">
+        <p>所顯示的標籤代表最低適應性</p>
+        <p>為個人經驗以及國內外普遍認知的適應狀況,僅供參考</p>
+        <p>適應為"種的好" 能展現植株應有型態而"非"種的活"</p>
+      </div>
+      <div class="modal-head">
+        <span>標籤解釋</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" class="filter-icon" id="plant_level-icon">
+          <image href="./img/watering-plants.png" x="0" y="0" height="10" width="10" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <p>簡單: 適合新手或是剛接觸的玩家種植</p>
+        <p>普通: 種植上需注意一些細節才能展現良好型態</p>
+        <p>困難: 難以馴化,需營造特定環境才能夠存活</p>
+      </div>
+      <div class="modal-head">
+        <span>標籤解釋</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="filter-icon" id="plant_type-icon">
+          <image href="./img/philodendron.png" x="0" y="0" height="24" width="24" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <p>地生: 適合長盆或地植</p>
+        <p>需攀爬: 需要攀爬住才能展現型態</p>
+        <p>可懸吊: 可作為吊掛盆栽依然生長良好</p>
+      </div>
+      <div class="modal-head">
+        <span>標籤解釋</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="humidity-icon">
+          <image href="./img/humidity.png" x="0" y="0" height="10" width="10" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <p>可耐低濕: 可承受40%左右的空氣溼度(普遍冷氣房無加溼)</p>
+        <p>普通: 盡可能維持50%-60%的空氣濕度</p>
+        <p>需高溼: 必須維持在60%的空氣濕度以上</p>
+      </div>
+      <div class="modal-head">
+        <span>標籤解釋</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="temperature-icon">
+          <image href="./img/thermometer.png" x="0" y="0" height="10" width="10" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <p>很怕熱: 環境需低於30度</p>
+        <p>有點怕熱: 可忍受30度-40度，但時間不宜過長</p>
+        <p>身強體壯: 在15度-40度仍可生長</p>
+        <p>有點怕冷: 環境不宜低於15度</p>
+        <p>很怕冷: 環境不宜低於20度</p>
+      </div>
+      <div class="modal-head">
+        <span>標籤解釋</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 10" class="filter-icon" id="light-icon">
+          <image href="./img/sun.png" x="0" y="0" height="10" width="10" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <p>可低光照: 可忍受低於遮陰50%的光照</p>
+        <p>中等散射光: 遮陰50%的光照</p>
+        <p>明亮散射光: 遮陰70%的光照</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: none;">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="star-icon">
+      <g stroke="none" fill="currentColor">
+        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2
+                11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73
+                3.23L16.23 18z" />
+      </g> -->
+    </svg>
+  </div>
+</body>
+
+</html>
